@@ -20,7 +20,7 @@
 
 | 日付 | 回 | 資料 |
 |---|---|---|
-| （準備中） | | |
+| 2026-08-31 | [Gemini Notebookで学ぶ、調査から資料までをつなぐAI入門](./events/2026-08-31-gemini-notebook/README.md) | [構成](./events/2026-08-31-gemini-notebook/slides.md) / [チートシート](./events/2026-08-31-gemini-notebook/cheatsheet.md) |
 
 ## ライセンス
 

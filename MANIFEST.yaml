@@ -6,7 +6,22 @@ distribution: biz-terrace-ai-materials
 repository: https://github.com/yamamonlab/biz-terrace-ai-materials
 source_repository: yamamonlab/community-labs
 source_root: biz-terrace-ai/08_public_materials
-files: []
+files:
+  - path: events/2026-08-31-gemini-notebook/README.md
+    source: biz-terrace-ai/01_events/2026-08-31-notebooklm-business-workshop/event-brief.md
+    sharing_tier: Public
+    approved_on: 2026-09-19
+    approved_by: 山門
+  - path: events/2026-08-31-gemini-notebook/slides.md
+    source: biz-terrace-ai/01_events/2026-08-31-notebooklm-business-workshop/slide-outline.md
+    sharing_tier: Public
+    approved_on: 2026-09-19
+    approved_by: 山門
+  - path: events/2026-08-31-gemini-notebook/cheatsheet.md
+    source: biz-terrace-ai/01_events/2026-08-31-notebooklm-business-workshop/session-onepager.md
+    sharing_tier: Public
+    approved_on: 2026-09-19
+    approved_by: 山門
 # 記入例:
 # files:
 #   - path: events/2026-08-31-notebooklm-business-workshop/cheatsheet.md
