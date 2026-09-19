@@ -1,0 +1,18 @@
+# 公開ファイルの台帳。events/ 配下の公開ファイルは、ここに1件ずつ載せる。
+# 正本は community-labs。scripts/ci/check-public-materials.sh が、
+# 「載っていない公開ファイル」「存在しない path」「承認欄の欠落」を検出する。
+schema_version: 1
+distribution: biz-terrace-ai-materials
+repository: https://github.com/yamamonlab/biz-terrace-ai-materials
+source_repository: yamamonlab/community-labs
+source_root: biz-terrace-ai/08_public_materials
+files: []
+# 記入例:
+# files:
+#   - path: events/2026-08-31-notebooklm-business-workshop/cheatsheet.md
+#     source: biz-terrace-ai/01_events/2026-08-31-notebooklm-business-workshop/session-onepager.md
+#     sharing_tier: Public            # participation_policy.md §4 の区分。Public 以外は載せない
+#     approved_on: 2026-09-20         # 登壇者・ホストの公開同意を確認した日
+#     approved_by: 山門               # 確認した運営メンバー
+#     external:                       # 任意。PDF や動画は Git に置かず、外部の URL を記録する
+#       slides: https://speakerdeck.com/<account>/<deck>
