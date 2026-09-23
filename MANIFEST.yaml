@@ -22,6 +22,16 @@ files:
     sharing_tier: Public
     approved_on: 2026-09-19
     approved_by: 山門
+  - path: events/2026-09-29-bizterrace-skills/README.md
+    source: biz-terrace-ai/01_events/2026-09-29-bizterrace-skills/event-plan.md
+    sharing_tier: Public
+    approved_on: 2026-09-23
+    approved_by: 山門
+  - path: events/2026-09-29-bizterrace-skills/cheatsheet.md
+    source: biz-terrace-ai/01_events/2026-09-29-bizterrace-skills/02_materials/handson/README.md
+    sharing_tier: Public
+    approved_on: 2026-09-23
+    approved_by: 山門
 # 記入例:
 # files:
 #   - path: events/2026-08-31-notebooklm-business-workshop/cheatsheet.md

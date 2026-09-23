@@ -5,12 +5,13 @@
 - 入口は公式サイトの [イベント一覧](https://biz-terrace-ai.pages.dev/events/) と [ライブラリ](https://biz-terrace-ai.pages.dev/library/) です。ここは実体の置き場です
 - 資料は回ごとに `events/YYYY-MM-DD-<slug>/` にまとめています。各フォルダの `README.md` に日付・対象者・目的・持ち帰りを書いています
 - 掲載しているのは、登壇者とホストが公開に同意した資料だけです。当日の議論、参加者限定の配布物、企業固有の情報は含めていません
+- 共有する資料は回ごとに決めています。スライドを載せていない回や、資料を載せていない回もあります
 
 ## 使い方
 
 | 目的 | 読むもの |
 |---|---|
-| 当日の内容を見返す | 各回の `slides.md`（構成と要点）、または `README.md` からリンクした Speaker Deck |
+| 当日の内容を見返す | 各回の `slides.md`（構成と要点）、または `README.md` からリンクした Speaker Deck（スライドを共有した回のみ） |
 | 自分の環境で同じ操作を試す | 各回の `cheatsheet.md`。前提・手順・確認ポイント・つまずきどころの順に書いています |
 | 自社の勉強会で使う | ライセンス（下記）の範囲でご利用ください。出典として本リポジトリの URL を添えてください |
 
@@ -21,6 +22,7 @@
 | 日付 | 回 | 資料 |
 |---|---|---|
 | 2026-08-31 | [Gemini Notebookで学ぶ、調査から資料までをつなぐAI入門](./events/2026-08-31-gemini-notebook/README.md) | [構成](./events/2026-08-31-gemini-notebook/slides.md) / [チートシート](./events/2026-08-31-gemini-notebook/cheatsheet.md) |
+| 2026-09-29 | [膨大な資料を一瞬で見やすく！明日から使えるAI「Skills」超入門](./events/2026-09-29-bizterrace-skills/README.md) | [チートシート](./events/2026-09-29-bizterrace-skills/cheatsheet.md) |
 
 ## ライセンス
 

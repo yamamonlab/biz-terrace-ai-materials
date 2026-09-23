@@ -1,5 +1,7 @@
 # <回の題名> — スライド構成
 
+<!-- スライドを共有すると決めた回（event-prep-manifest.yaml の public_materials.slides: shared）だけ、このファイルを残す。共有しない回はファイルごと消し、README の行も消す。「準備中」で置き場だけ作らない -->
+
 日付: YYYY-MM-DD / 登壇: <表示名> / 所要: NN 分
 
 各枚の要点だけを載せます。スライド本体を公開した場合は README の Speaker Deck リンクから開けます。

@@ -11,11 +11,13 @@
 
 ## この回の資料
 
+<!-- 共有すると決めた資料（event-prep-manifest.yaml の public_materials が shared）の行だけを残す。共有しないものの行とファイルは消す -->
+
 | ファイル | 用途 |
 |---|---|
 | [slides.md](./slides.md) | スライドの構成と各枚の要点 |
 | [cheatsheet.md](./cheatsheet.md) | 自分の環境で同じ操作を再現する手順 |
-| Speaker Deck | <公開した場合の URL。無ければ行ごと削除> |
+| Speaker Deck | <スライド本体の URL。slides: shared かつ登壇者が本体の公開に同意した時だけ。それ以外は行ごと削除> |
 
 ## 持ち帰り（CTA）
 
