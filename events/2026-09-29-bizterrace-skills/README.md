@@ -13,25 +13,25 @@
 
 | ファイル | 用途 |
 |---|---|
-| [cheatsheet.md](./cheatsheet.md) | 公開Skill「Cognitive View」を、自分が普段使っているAIで実行する手順 |
+| [cheatsheet.md](./cheatsheet.md) | 公開Skill「HTML Visualizer」を、自分が普段使っているAIで実行する手順 |
 
 当日使った型そのものは、Skill配布repoで公開しています。
 
-- Skill: https://github.com/yamamonlab/biz-terrace-ai-skills/tree/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view
+- Skill: https://github.com/yamamonlab/biz-terrace-ai-skills/tree/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer
 - 完成版の確認ページ（当日の実行結果と同じもの）: https://biz-terrace-ai.pages.dev/handson/2026-09-29/cognitive-view.html
 
 スライド本体と当日のデモ画面は公開していません。チートシートから同じ流れを再現できます。
 
 ## 持ち帰り（CTA）
 
-翌朝の最初の5分で、読むのを後回しにしている長文メールか資料を1つ選び、Cognitive View に通してみる。社内で使ってよいAIと、扱ってよい資料で試してください。
+翌朝の最初の5分で、読むのを後回しにしている長文メールか資料を1つ選び、HTML Visualizer に通してみる。社内で使ってよいAIと、扱ってよい資料で試してください。
 
 型は「これまでの内容をSkillにして」と頼むだけで作れ、社内で分け合え、外の良い型も確かめて借りられます。社内の情報セキュリティの範囲の中で、議事録の整理・報告書の下書き・調査メモなど、ほかの仕事にも広げてみてください。試した結果は、よければ次回のLTや実践記録で聞かせてください（任意）。
 
 ## 出典
 
-- Cognitive View: yamamonlab/biz-terrace-ai-skills（MIT）。当日は commit `78ce777a1ad8423dce2eb00757f0149021349ccb` に固定して使用
-- `references/diagram/` は [diagram-design](https://github.com/cathrynlavery/diagram-design)（MIT, Cathryn Lavery）からの派生。詳細はSkill側の `THIRD_PARTY_NOTICES.md`
+- HTML Visualizer: yamamonlab/biz-terrace-ai-skills（MIT）。当日は commit `92510937954c75699bdd2ec185dc7b6d27496d05` に固定して使用
+- 図と表の約束ごと（直接ラベル・強調色は1か所など）の一部は [diagram-design](https://github.com/cathrynlavery/diagram-design)（MIT, Cathryn Lavery）に由来。詳細はSkill側の `THIRD_PARTY_NOTICES.md`
 
 ## 掲載について
 

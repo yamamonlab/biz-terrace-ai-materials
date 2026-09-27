@@ -1,65 +1,67 @@
-# Skills入門 — 公開Skill「Cognitive View」再現チートシート
+# Skills入門 — 公開Skill「HTML Visualizer」再現チートシート
 
-対象: 普段AIを使っているビジネス職・企画職・AI推進担当 / 所要: 10〜15 分 / 最終確認: 2026-09-23（リンクと固定commitの中身を開催前に確認）
+対象: 普段AIを使っているビジネス職・企画職・AI推進担当 / 所要: 10〜15 分 / 最終確認: 2026-09-27（リンクと当日の版の中身を開催前に確認）
 
-当日の「公開OSSのSkillを、自分が普段使っているAIにリンクで渡して1回実行する（USE）」を、そのままたどる手順です。AIが出した結果の確認と、その利用の判断は試す人が持ちます。
+当日の「公開されている型を、自分が普段使っているAIにリンクで渡して1回動かす（借りる）」を、そのままたどる手順です。AIが出した結果の確認と、その利用の判断は試す人が持ちます。
 
 ## 前提
 
 - 道具: **普段お使いのAIで構いません**（ChatGPT / Microsoft Copilot / Gemini / Claude / Codex / Claude Code 等）。新しいアカウントや環境構築は不要です
-- 型: 公開OSS `yamamonlab/biz-terrace-ai-skills` の `skills/cognitive-view/`。当日は commit `78ce777a1ad8423dce2eb00757f0149021349ccb` に固定して使いました
+- 型: 公開OSS `yamamonlab/biz-terrace-ai-skills` の `skills/html-visualizer/`。当日は commit `92510937954c75699bdd2ec185dc7b6d27496d05`（今日の版）に固定して使いました
 - データ: **公開資料かダミーデータだけ**を使ってください。業務データ、顧客情報、個人情報は入れない
 - このSkillの用途: **自分が受け取った長文を理解するための道具**です。提出物・配布物を作る型ではありません
 
 ## 手順
 
-### 1. 型を読める状態にする
+当日のスライドと同じく、1 型 → 2 資料 → 3 依頼文 の順に渡します。
 
-Cognitive View は `SKILL.md` だけではなく `references/` を含めて1つのSkillです。**SKILL.md だけを渡した状態は完全な実行ではありません。**
+### 1. 型を渡す
 
-**フォルダごと読める環境**（Codex / Claude Code / リポジトリ連携）は、このURLをそのまま渡します。
+HTML Visualizer は `SKILL.md` だけではなく、`references/` の部品集と図の決まりを含めて1つのSkillです。**SKILL.md だけを渡した状態は完全な実行ではありません。**
 
-```text
-https://github.com/yamamonlab/biz-terrace-ai-skills/tree/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view
-```
-
-**チャットAI**（ChatGPT / Copilot / Gemini / Claude 等）は、**フォルダのURLを渡してもファイル一覧しか見えません。** 中身は1URL＝1ファイルなので、次の4本をまとめて貼り、「このリンクを全部読んでから作業して」と添えます。
+**フォルダごと読めるAI**（Codex / Claude Code / リポジトリ連携）は、このURLをそのまま渡します。
 
 ```text
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view/SKILL.md
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view/references/output-contract.md
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view/references/quality-rubric.md
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view/references/capability-spec.md
+https://github.com/yamamonlab/biz-terrace-ai-skills/tree/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer
 ```
 
-図（SVG）まで描かせたい場合は、`references/diagram/grammar.md` と、描かせたい型の `references/diagram/type-*.md`（timeline / flowchart / process / state / quadrant / tree / bar）を同じ形式で追加します。
+**リンクを読めるチャットAI**（ChatGPT / Copilot / Gemini / Claude 等）は、**フォルダのURLを渡してもファイル一覧しか見えません。** 中身は1URL＝1ファイルなので、次の3本（コピー用リンク）をまとめて貼り、「このリンクを全部読んでから作業して」と添えます。
 
-社内ポリシーで外部リンクの取得が止まっている場合は、同じURLをブラウザで開いて本文をコピーし、チャットへ貼っても同じです（`SKILL.md` は約2万字あるので分割して貼ることになります）。
+```text
+https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/SKILL.md
+https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/references/components.md
+https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/references/diagrams.md
+```
+
+この3本で、表・グラフ・時系列・流れ図まで描けます。追加のリンクはいりません。
+
+**リンクを読めないAI**や、社内ポリシーで外部リンクの取得が止まっている場合は、同じURLをブラウザで開いて本文をコピーし、チャットへ貼っても同じです（`SKILL.md` は約6千字、`references/` の2本を合わせると約3.3万字あります。入力上限に当たる場合は分割して貼ります）。
 
 ### 2. 資料を渡す
 
 まずは公開サンプル（社内AIツール導入検討の架空メモ）で試すのが確実です。
 
 ```text
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad8423dce2eb00757f0149021349ccb/skills/cognitive-view/examples/sample-document.md
+https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/examples/sample-document.md
 ```
 
-### 3. 1行だけ依頼する
+### 3. 依頼文を1行だけ送る
 
 ```text
-この資料を、短時間で全体像を把握できる Cognitive View にしてください。HTMLで出力してください。
+HTML Visualizer を使って、この資料を短時間で全体像を把握できる形にしてください。HTMLで出力してください。
 ```
 
 ## 確認ポイント
 
 正解のレイアウトを当てるものではありません。次が満たされているかを見ます。
 
-- 先頭だけで「何の資料で、今どういう状態か」が分かる
-- 原文に重要数値がある場合**だけ**メトリクスが出る（数値がないのにカードを作っていない）
-- 比較は表、時系列は日付リストか図、というように関係に合う表現が選ばれている
-- 推測・未確認が事実と混ざっていない
-- **原文にない優先順位や推奨が足されていない**（既定は理解支援のみ。判断材料が欲しい時だけ「比較して判断材料をください」と追加で頼む）
-- 詳細は後ろへ折りたたまれている
+- 先頭の見出しとリードだけで「何の資料で、今どういう状態か」が分かる
+- 最初の画面に、分かっていること / まだ分かっていないこと / これから、の一覧が並ぶ（未確認のことが「分かっていること」に入っていない）
+- 数値が原文の表記のまま（合計・差・単位の書き換えをしていない）
+- 比較・推移・因果は表や図に、それ以外は読みやすい本文になっている
+- 推測・未確認が事実と混ざっておらず、誰の発言かが残っている
+- **原文にない優先順位・推奨・担当・日付が足されていない**（既定は理解支援のみ。判断材料が欲しい時だけ「比較して判断材料をください」と追加で頼む）
+- 末尾の「原文との対応」を開くと、画面の内容を原文の一節へ辿れる
 
 モデルによって文章や配置の細部は変わります。狙いは完全一致ではなく、同じ判断基準と骨格へ寄せることです。
 
@@ -69,13 +71,26 @@ https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/78ce777a1ad84
 
 | 症状 | 原因 | 対処 |
 |---|---|---|
-| 普通の要約文が返る | 型が読めていない | `references/` まで渡したか確認する。チャットAIならコピー用リンク（raw リンク）4本方式へ切り替える |
-| AIが「読めません」と言う | フォルダURLを渡している／外部取得が止まっている | コピー用リンク（raw リンク）方式、それでも駄目なら本文コピー貼り付けへ |
+| 普通の要約文が返る | 型が読めていない | `references/` まで渡したか確認する。チャットAIならコピー用リンク3本の方式へ切り替える |
+| AIが「読めません」と言う | フォルダURLを渡している／外部取得が止まっている | コピー用リンク3本の方式、それでも駄目なら本文のコピー貼り付けへ |
 | HTMLがコードのまま表示される | プレビュー表示になっていない | チャット内のプレビュー（アーティファクト）表示へ切り替える。難しければ上の完成形URLを開く |
 | 無料枠の上限で止まる | メッセージ制限 | 上の完成形URLで結果を確認し、後で自分の環境でやり直す |
 
-## 次の一歩
+## 明日から自分の職場で始める4つの方法
 
-1. **USE（借りる）** — 今日やったこと。公開されている型をそのまま使う
-2. **TUNE（直す）** — 同じSkillの `Audience` を「経営層向け」などに変え、初期表示の焦点だけを変える。情報は消さない
-3. **MAKE（作る）** — 普段のチャットで良い仕事ができた直後に「今の作業を、別の仕事でも再現できるように SKILL.md にして」と頼む。「具体的な社名や数値などの固有名詞は抜いて汎用的にして」と添えると、過学習を防げる
+業務の資料を入れるのは、**会社で利用が許可されたAIだけ**にしてください。迷ったら社内のAI推進担当に確認します。
+
+| 方法 | こんな環境なら | やること |
+|---|---|---|
+| **A. リンクで渡す** | AIが公開Webを読める（ChatGPT、Claude、Gemini、Web参照が有効なCopilot 等） | 上の手順1と同じ。リンクを貼る |
+| **B. ファイルで渡す** | 社内の有識者がSkillを共有している / 外部リンクは止められている | 共有されたSkillファイル（`SKILL.md` と `references/`）を会話に添付するか、社内ストレージから参照させる |
+| **C. 本文を貼る** | ファイル添付も外部リンクも使えない | `SKILL.md` などの本文を会話の1通目に貼る。よく使うならTeamsのピン留めやOneNoteに置いておく |
+| **D. 自分で作らせる** | 手元に型がない / まず気軽に試したい | 下の「作る」の頼み方で自分用の型を作り、保存して次回の1通目に貼る |
+
+Copilotがリンクを読めるかは、会社の管理者設定によって変わります。読めなければ B か C を使ってください。
+
+## 次の一歩：借りる → 直す → 作る
+
+1. **借りる** — 今日やったこと。公開されている型をそのまま使う
+2. **直す** — 型の判断基準を1か所だけ書き換える。当日の実演では、冒頭の一覧の列「分かっていること / まだ分かっていないこと / これから」を、自社の会議の決まり「結論 / 影響 / 次に決める論点」に書き換えた。同じ資料・同じ依頼でも、最初に見えるものが変わる。情報は消さない
+3. **作る** — 普段のチャットで良い仕事ができた直後に「今の作業を、別の仕事でも再現できるように SKILL.md にして」と頼む。「具体的な社名や数値などの固有名詞は抜いて汎用的にして」と添えると、特定の案件に寄りすぎない型になる
