@@ -14,6 +14,7 @@
 | ファイル | 用途 |
 |---|---|
 | [cheatsheet.md](./cheatsheet.md) | 公開Skill「HTML Visualizer」を、自分が普段使っているAIで実行する手順 |
+| [Skills 入門ガイド（HTML）](https://biz-terrace-ai.pages.dev/handson/2026-09-29/guide.html) | 基礎（Skill とは・中身）と、借りる・直す・作るの演習。文はボタンでコピーできる |
 
 当日使った型そのものは、Skill配布repoで公開しています。
 
