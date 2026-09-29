@@ -186,7 +186,8 @@ description: 会議メモ・議事録の下書きを「決まったこと / 宿�
 | Codex | 自分用: `~/.agents/skills/<name>/`　このリポジトリだけ: `.agents/skills/<name>/` | `$<name>` か `/skills` |
 | Claude アプリ（Skills を使えるプランで、コード実行をオン） | 型のフォルダ1つだけを ZIP に圧縮し（ZIP を開くと `<name>/SKILL.md` が見える形）、設定の Skills の画面からアップロードしてオンにする。4-1でダウンロードした ZIP はそのままでは使えない。展開して名前を `html-visualizer` に変えたフォルダを圧縮し直す | — |
 | ChatGPT（Business・Enterprise など） | Skills の機能から登録 | `@<name>` |
-| 対応していない・使えないとき | GPT・プロジェクト（ChatGPT）、Gem（Gemini）、エージェント（Microsoft 365 Copilot。指示は8,000字まで、知識ファイルは `.md` を `.txt` に）、プロジェクト（Claude）の指示に本文を入れる。その中の会話ではいつも使われる | — |
+| Gemini（個人の Google アカウント） | Skills の画面で、`SKILL.md` が入ったフォルダか ZIP をアップロード（個人アカウントから順に公開中・18歳以上。会社・学校のアカウントではまだ使えない。[Google 公式ヘルプ](https://support.google.com/gemini/answer/17094296)） | — |
+| 対応していない・使えないとき | GPT・プロジェクト（ChatGPT）、Gem（Gemini。Google は Gems を Skills として作り直す予定）、エージェント（Microsoft 365 Copilot。指示は8,000字まで、知識ファイルは `.md` を `.txt` に）、プロジェクト（Claude）の指示に本文を入れる。その中の会話ではいつも使われる | — |
 
 Mac のターミナルで、HTML Visualizer を Claude Code の自分用に置く例（Codex なら `~/.claude/skills` を `~/.agents/skills` に替える）:
 
