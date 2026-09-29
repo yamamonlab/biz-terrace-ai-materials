@@ -2,7 +2,7 @@
 
 対象: 普段AIを使っているビジネス職・企画職・AI推進担当 / 所要: 借りる 10〜15 分、作って自動で呼ぶまで 30 分 / 最終確認: 2026-09-29（リンク・当日の版の中身・置き場所を開催当日に確認）
 
-> **図解の教科書**（4段階を、チャットAI と Claude Code・Codex の2路線で図にしたもの）: https://biz-terrace-ai.pages.dev/handson/2026-09-29/textbook.html
+> **教科書**（4段階を、チャットAI と Claude Code・Codex それぞれの手順で）: https://biz-terrace-ai.pages.dev/handson/2026-09-29/textbook.html
 >
 > 基礎（Skill とは）と、借りる・直す・作るの3つの演習を1ページにまとめた HTML 版もあります。【】を埋めれば自分の仕事にも使え、型は GitHub を開かずにボタンでコピー・保存できます: https://biz-terrace-ai.pages.dev/handson/2026-09-29/guide.html
 
