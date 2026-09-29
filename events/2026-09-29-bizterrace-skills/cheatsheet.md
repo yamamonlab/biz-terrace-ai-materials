@@ -18,52 +18,41 @@
 ## 前提
 
 - 道具: **普段お使いのAIで構いません**（ChatGPT / Microsoft Copilot / Gemini / Claude / Codex / Claude Code 等）。1〜3に新しいアカウントや環境構築は不要です
-- 型: 公開OSS `yamamonlab/biz-terrace-ai-skills` の `skills/html-visualizer/`。当日は commit `92510937954c75699bdd2ec185dc7b6d27496d05`（今日の版）に固定して使いました
+- 型: 公開OSS `yamamonlab/html-visualizer`（https://github.com/yamamonlab/html-visualizer）。リンクは常に最新版を指します。当日に使った版はタグ `bizterrace-2026-09-29` で残しています
 - データ: **公開資料かダミーデータだけ**を使ってください。業務データ、顧客情報、個人情報は入れない。業務の資料を入れるのは、**会社で利用が許可されたAIだけ**です
 - このSkillの用途: **自分が受け取った長文を理解するための道具**です。提出物・配布物を作る型ではありません
 
 ## 1. 借りる — 当日のワークを再現する
 
-当日のスライドと同じく、型 → 資料 → 依頼文 の順に渡します。
+AIに渡すのは **型・資料・依頼文** の3つです。型はリンク1本で渡せます。
 
-### 型を渡す（環境に合う方法を1つ）
+### いちばん短い渡し方（リンクを読めるAI）
 
-HTML Visualizer は `SKILL.md` だけではなく、`references/` の部品集と図の決まりを含めて1つのSkillです。**SKILL.md だけを渡した状態は完全な実行ではありません。**
+下の3行をそのまま貼ります。
 
-| 環境 | 渡し方 |
+```text
+https://github.com/yamamonlab/html-visualizer
+このSkillを使って、次の資料を完全版のHTMLにしてください。
+https://raw.githubusercontent.com/yamamonlab/html-visualizer/main/examples/sample-document.md
+```
+
+- 1行目が型です。リンク先の案内に、AIが読むファイル（`SKILL.md` と `references/` の2つ）が書いてあります。**SKILL.md だけを渡した状態は完全な実行ではありません。**
+- 3行目が資料（社内AIツール導入検討の架空メモ）です。自分の資料で試すときは、ファイルを添付し、「次の資料」を「添付の資料」にします。
+- 「完全版」を入れると、AIが途中で省いた簡略版を出しにくくなります。当日のスライドの依頼文（「短時間で全体像を把握できる形に」）でも動きます。
+
+フォルダを扱えるAI（Codex / Claude Code）には、作業フォルダで次を送ります。
+
+```text
+https://github.com/yamamonlab/html-visualizer
+このSkillを使って、examples/sample-document.md を完全版のHTMLにしてください。HTMLファイルで保存してください。
+```
+
+### リンクで読めないとき
+
+| 起きたこと | 渡し方 |
 |---|---|
-| リンクを読めるチャットAI（ChatGPT / Claude / Gemini / Web参照が有効な Copilot 等） | 下のコピー用リンク3本をまとめて貼り、「このリンクを全部読んでから作業して」と添える |
-| 外部リンクの取得が止められている | 3本をブラウザで開いて本文をコピーし、貼る（約4万字。入力上限に当たれば分けて貼る）か、保存したファイルを添付する。ガイドのボタンで、本文をまとめてコピー・保存できる |
+| 外部リンクの取得が止められている | [手順ガイド](https://biz-terrace-ai.pages.dev/handson/2026-09-29/guide.html#lab1)のボタンで、型の本文をまとめてコピーして貼るか、1つのファイルに保存して添付する（約4万字。Copilot は拡張子を `.txt` に変えて添付） |
 | GitHub ごと止められている | 別の端末で本文をコピーする。難しければ、下の完成形で結果だけ確かめ、後で自分の環境でやり直す |
-| フォルダごと読めるAI（Codex / Claude Code / リポジトリ連携） | 下のフォルダURLを1本渡し、「このフォルダを読んでから作業して」と添える。自分の環境に登録する方法は「4. 自動で呼び出す」 |
-
-チャットAIには、**フォルダのURLを渡してもファイル一覧しか見えません。** 中身は1URL＝1ファイルなので、コピー用リンクを3本とも貼ります。この3本で、表・グラフ・時系列・流れ図まで描けます。
-
-```text
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/SKILL.md
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/references/components.md
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/references/diagrams.md
-```
-
-フォルダごと読めるAI向け:
-
-```text
-https://github.com/yamamonlab/biz-terrace-ai-skills/tree/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer
-```
-
-### 資料を渡す
-
-まずは公開サンプル（社内AIツール導入検討の架空メモ）で試すのが確実です。
-
-```text
-https://raw.githubusercontent.com/yamamonlab/biz-terrace-ai-skills/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer/examples/sample-document.md
-```
-
-### 依頼文を1行だけ送る
-
-```text
-HTML Visualizer を使って、この資料を短時間で全体像を把握できる形にしてください。HTMLで出力してください。
-```
 
 ### 確認ポイント
 
@@ -85,8 +74,8 @@ HTML Visualizer を使って、この資料を短時間で全体像を把握で�
 
 | 症状 | 原因 | 対処 |
 |---|---|---|
-| 普通の要約文が返る | 型が読めていない | `references/` まで渡したか確認する。チャットAIならコピー用リンク3本の方式へ切り替える |
-| AIが「読めません」と言う | フォルダURLを渡している／外部取得が止まっている | コピー用リンク3本の方式、それでも駄目なら本文の貼り付けかファイルの添付へ |
+| 普通の要約文が返る | 型が読めていない | `SKILL.md` だけでなく `references/` まで読んだか、AIに聞いて確かめる。読めていなければ本文の貼り付けかファイルの添付へ |
+| AIが「読めません」と言う | 外部取得が止まっている | 「リンクで読めないとき」の表のとおり、本文の貼り付けかファイルの添付へ |
 | HTMLがコードのまま表示される | プレビュー表示になっていない | チャット内のプレビュー（アーティファクト・キャンバス）表示へ切り替える。難しければ上の完成形URLを開く |
 | 無料枠の上限で止まる | メッセージ制限 | 上の完成形URLで結果を確認し、後で自分の環境でやり直す |
 
@@ -135,13 +124,13 @@ meeting-minutes/          ← name と同じ名前
   references/             ← 長い参考情報があれば（なくてもよい）
 ```
 
-- 借りた型: 当日の版をまとめて取り、展開した中の `skills/html-visualizer` フォルダを使う（`SKILL.md` だけを取り出さない）
+- 借りた型: 最新版をまとめて取り、フォルダごと使う（`SKILL.md` だけを取り出さない）
 
   ```text
-  https://github.com/yamamonlab/biz-terrace-ai-skills/archive/92510937954c75699bdd2ec185dc7b6d27496d05.zip
+  https://github.com/yamamonlab/html-visualizer/archive/refs/heads/main.zip
   ```
 
-  ダウンロードした ZIP をダブルクリックして展開します（ブラウザによっては自動で展開されます）。ダウンロードフォルダに `biz-terrace-ai-skills-92510937954c75699bdd2ec185dc7b6d27496d05` というフォルダができ、その中の `skills/html-visualizer` が型です
+  ダウンロードした ZIP をダブルクリックして展開します（ブラウザによっては自動で展開されます）。`html-visualizer-main` というフォルダができるので、名前を `html-visualizer`（`name` と同じ）に変えます。Mac のターミナルを使うなら、4-3 の1行で取得と配置が一度に済みます
 
 - 作った型: 3で出てきた本文を `SKILL.md` という名前で保存し、`name` と同じ名前のフォルダに入れる
 
@@ -164,18 +153,17 @@ description: 会議メモ・議事録の下書きを「決まったこと / 宿�
 |---|---|---|
 | Claude Code | 自分用: `~/.claude/skills/<name>/`　このプロジェクトだけ: `.claude/skills/<name>/` | `/<name>` |
 | Codex | 自分用: `~/.agents/skills/<name>/`　このリポジトリだけ: `.agents/skills/<name>/` | `$<name>` か `/skills` |
-| Claude アプリ（Skills を使えるプランで、コード実行をオン） | 型のフォルダ1つだけを ZIP に圧縮し（ZIP を開くと `<name>/SKILL.md` が見える形）、設定の Skills の画面からアップロードしてオンにする。4-1でダウンロードした ZIP はそのままでは使えない。展開した `html-visualizer` フォルダだけを圧縮し直す | — |
+| Claude アプリ（Skills を使えるプランで、コード実行をオン） | 型のフォルダ1つだけを ZIP に圧縮し（ZIP を開くと `<name>/SKILL.md` が見える形）、設定の Skills の画面からアップロードしてオンにする。4-1でダウンロードした ZIP はそのままでは使えない。展開して名前を `html-visualizer` に変えたフォルダを圧縮し直す | — |
 | ChatGPT（Business・Enterprise など） | Skills の機能から登録 | `@<name>` |
 | 対応していない・使えないとき | GPT・プロジェクト（ChatGPT）、Gem（Gemini）、エージェント（Microsoft 365 Copilot。指示は8,000字まで、知識ファイルは `.md` を `.txt` に）、プロジェクト（Claude）の指示に本文を入れる。その中の会話ではいつも使われる | — |
 
-Mac のターミナルで、当日の型を Claude Code の自分用に置く例（Codex なら `~/.claude/skills` を `~/.agents/skills` に替える）:
+Mac のターミナルで、HTML Visualizer を Claude Code の自分用に置く例（Codex なら `~/.claude/skills` を `~/.agents/skills` に替える）:
 
 ```bash
-mkdir -p ~/.claude/skills
-cp -R ~/Downloads/biz-terrace-ai-skills-92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer ~/.claude/skills/
+git clone https://github.com/yamamonlab/html-visualizer ~/.claude/skills/html-visualizer
 ```
 
-ファインダーやエクスプローラーでフォルダごとコピーしても同じです。`.claude` や `.agents` は隠しフォルダなので、Mac のファインダーでは「移動 → フォルダへ移動」に `~/.claude/skills` と入れて開きます（`Cmd+Shift+.` で隠しフォルダを表示することもできます）。置いた型が出てこなければ、Claude Code は `/reload-skills`、Codex は再起動します。
+最新版にするときは `git -C ~/.claude/skills/html-visualizer pull` です。ZIP から展開した `html-visualizer` フォルダを、ファインダーやエクスプローラーでコピーしても同じです。`.claude` や `.agents` は隠しフォルダなので、Mac のファインダーでは「移動 → フォルダへ移動」に `~/.claude/skills` と入れて開きます（`Cmd+Shift+.` で隠しフォルダを表示することもできます）。置いた型が出てこなければ、Claude Code は `/reload-skills`、Codex は再起動します。
 
 ### 4-4. 自動で選ばれるか確かめる
 

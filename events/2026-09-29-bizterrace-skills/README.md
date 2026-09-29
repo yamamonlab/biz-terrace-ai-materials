@@ -16,9 +16,9 @@
 | [cheatsheet.md](./cheatsheet.md) | 公開Skill「HTML Visualizer」を普段のAIで再現し、直す・作る・環境に登録して自動で呼び出すまで進める手順 |
 | [Skills 入門ガイド（HTML）](https://biz-terrace-ai.pages.dev/handson/2026-09-29/guide.html) | 基礎（Skill とは・中身）と、借りる・直す・作るの演習。文はボタンでコピーできる |
 
-当日使った型そのものは、Skill配布repoで公開しています。
+当日使った型そのものは、単体のリポジトリで公開しています（リンクは最新版。当日の版はタグ `bizterrace-2026-09-29`）。
 
-- Skill: https://github.com/yamamonlab/biz-terrace-ai-skills/tree/92510937954c75699bdd2ec185dc7b6d27496d05/skills/html-visualizer
+- Skill: https://github.com/yamamonlab/html-visualizer
 - 完成版の確認ページ（当日の実行結果と同じもの）: https://biz-terrace-ai.pages.dev/handson/2026-09-29/cognitive-view.html
 
 スライド本体と当日のデモ画面は公開していません。チートシートから同じ流れを再現できます。
@@ -31,7 +31,7 @@
 
 ## 出典
 
-- HTML Visualizer: yamamonlab/biz-terrace-ai-skills（MIT）。当日は commit `92510937954c75699bdd2ec185dc7b6d27496d05` に固定して使用
+- HTML Visualizer: yamamonlab/html-visualizer（MIT）。当日は旧配布先 yamamonlab/biz-terrace-ai-skills の commit `92510937954c75699bdd2ec185dc7b6d27496d05` を使用（2026-09-29 に単体のリポジトリへ移転。同じ中身をタグ `bizterrace-2026-09-29` で残している）
 - 図と表の約束ごと（直接ラベル・強調色は1か所など）の一部は [diagram-design](https://github.com/cathrynlavery/diagram-design)（MIT, Cathryn Lavery）に由来。詳細はSkill側の `THIRD_PARTY_NOTICES.md`
 
 ## 掲載について

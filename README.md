@@ -38,4 +38,4 @@
 ## 運営
 
 - 運営・保守: [yamamonlab](https://github.com/yamamonlab)
-- 関連: [biz-terrace-ai-skills](https://github.com/yamamonlab/biz-terrace-ai-skills)（Skill の配布先）
+- 関連: [html-visualizer](https://github.com/yamamonlab/html-visualizer)（第5回の Skill）、[biz-terrace-ai-skills](https://github.com/yamamonlab/biz-terrace-ai-skills)（ほかの Skill の配布先）
